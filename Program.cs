@@ -1,12 +1,22 @@
 ﻿using System;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using Knapcode.TorSharp;
+#if NETCOREAPP
+using System.Runtime.InteropServices;
+#endif
 
 namespace onion_scraper
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Hello World!");
+            tor_sharp.init();
         }
     }
+
 }

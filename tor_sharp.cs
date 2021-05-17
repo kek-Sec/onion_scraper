@@ -74,7 +74,7 @@ namespace onion_scraper
                     await proxy.ConfigureAndStartAsync();
                     await proxy.GetNewIdentityAsync();
                     Console.WriteLine("Onion IP -> {0}",await httpClient.GetStringAsync("http://api.ipify.org"));
-                    await DotFail.ScrapeAsync(httpClient);
+                    await WebRequest.ScrapeAsync(httpClient,"http://darkfailllnkf4vf.onion");
                 }
                // proxy.Stop();
             }

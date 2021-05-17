@@ -9,10 +9,10 @@ namespace onion_scraper
     {
         public static async Task WriteTextAsync(string filePath, string text)
         {
-            byte[] encodedText = Encoding.Unicode.GetBytes(text);
+            byte[] encodedText = Encoding.UTF8.GetBytes(text);
 
             using (FileStream sourceStream = new FileStream(filePath,
-                FileMode.Append, FileAccess.Write, FileShare.None,
+                FileMode.Create, FileAccess.Write, FileShare.None,
                 bufferSize: 4096, useAsync: true))
             {
                 await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);

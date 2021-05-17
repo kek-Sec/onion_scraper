@@ -12,23 +12,24 @@ namespace onion_scraper
     {
         /*
          * @param client -> The http client , HttpClient is intended to be instantiated once per application
+         * @param index -> index used for arrays containing labels and urls
          */
-        public static async Task ScrapeAsync(HttpClient client,String url)
+        public static async Task ScrapeAsync(HttpClient client,int index)
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(url);
+                HttpResponseMessage response = await client.GetAsync(tor_sharp.onions[index]);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
                 // Above three lines can be replaced with new helper method below
                 // string responseBody = await client.GetStringAsync(uri);
 
-                Console.WriteLine("{0} returned {1}",url,response.StatusCode);
-                await FileWriter.WriteTextAsync("..\\..\\..\\scraped_sites\\dot_fail.html", responseBody);
+                Console.WriteLine("{0} returned {1}",tor_sharp.onion_labels[index],response.StatusCode);
+                await FileWriter.WriteTextAsync("..\\..\\..\\scraped_sites\\" + tor_sharp.onion_labels[index] + ".html", responseBody);
             }
             catch (Exception e)
             {
-                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("\nException thrown by -> {0}!",tor_sharp.onion_labels[index]);
                 Console.WriteLine("Message :{0} ", e.Message);
             }
         }

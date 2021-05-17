@@ -1,0 +1,289 @@
+<!DOCTYPE html><html><head>
+  <!-- add metadata about your site here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' end.chan; img-src 'self'; child-src 'self';">
+  <!-- link to any scripts you need here -->
+  <!-- link to your base url here -->
+  <!-- base href="/" -->
+  <!-- link rel="canonical" href="http://Endchan.net/" / -->
+  <!-- link to your CSS here -->
+  <link href=".static/global.css" type="text/css" rel="stylesheet">
+  <link href=".static/mobile.css" media="only screen and (max-width: 414px)" type="text/css" rel="stylesheet">
+  <link href=".static/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href=".static/css/PenumbraLynx/watcher.css" type="text/css" rel="stylesheet">
+  <!-- don't add a title, the engine already does that for you -->
+  <link href="overboard/index.rss" rel="alternate" type="application/rss+xml" title="Endchan Overboard">
+
+  <script src=".static/api.js"></script>
+  <script src=".static/switcher.js"></script>
+  <script src=".static/favorites.js" defer=""></script>
+  <script>var DISABLE_JS=false;</script>
+  <script src="/.static/js/PenumbraLynx/watcher.js" defer=""></script>
+  <!-- page specific -->
+  <script src=".static/homepage.js"></script>
+  <style>
+    nav {
+      font-size: 70%;
+    }
+    nav a {
+      font-size: 100%;
+      float: none;
+    }
+    nav ul.nonmenu > li:after {
+      content: '/';
+    }
+    nav ul.nonmenu > li:last-of-type:after {
+      content: none;
+    }
+    nav ul {
+      font-size: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    nav ul.nonmenu li {
+      display: inline-block;
+    }
+    nav ul.nonmenu:before {
+      content: '['
+    }
+    nav ul.nonmenu:after {
+      content: ']'
+    }
+  </style>
+<title>Endchan</title></head>
+<body>
+
+  <!-- top of page navigation bar -->
+  <nav class="desktopNav">
+    <ul class="nonmenu">
+      <li><a href="." class="navLinkHome" rel="home">home</a>
+      </li><li><a href="boards.js" class="navBoardList">boards</a>
+      </li><li><a href="overboard_sfw" class="navOverboard">SFW overboard</a>
+      </li><li><a href="overboard" class="navOverboard">NSFW overboard</a>
+      </li><li><a href="account.js" class="linkAccount">account</a>
+      </li><li><a href=".static/posting.html" class="navPosting" id="navPosting">help</a>
+    </li></ul>
+    <ul class="nonmenu">
+      <li><a rel="nofollow" href="https://qchat.rizon.net/?channels=Endchan" target="_blank"><i class="fa fa-quote-right" title="Chat"></i> irc</a>
+      </li><li><a rel="nofollow" href="https://twitter.com/EndchanXYZ" target="_blank" title="Twitter"><i class="fa fa-twitter" title="Twitter"></i></a>
+      </li><li><a rel="nofollow" href="https://discord.gg/ffWabPn" target="_blank" title="Discord"><i class="fa fa-gamepad" title="Discord"></i> discord</a>
+      </li><li><a rel="nofollow" href="https://t.me/endchan" target="_blank" title="Telegram"><i class="fab fa-telegram-plane" title="Telegram"></i> telegram</a>
+    </li></ul>
+    <ul class="menu nonmenu">
+      <li><i class="fa fa-wrench" title="Tools"></i> Tools
+        <ul class="sub">
+          <li><i class="fa fa-comments-o" title="Poal"></i> <a target="_blank" href="http://poal.me/">Poal.Me</a>
+          <!-- li><i class="fa fa-sticky-note-o" title="Spit"></i> <a target=_blank href="https://spit.mixtape.moe/">Spit.mixtape.moe</a -->
+          </li><li><i class="fa fa-archive" title="Archive"></i> <a target="_blank" href="http://archive.is/">Archive.Is</a>
+          <!-- li><i class="fa fa-upload" title="Mixtape"></i> <a target=_blank href="https://mixtape.moe/">Mixtape.moe</a -->
+          <!-- li><i class="fa fa-envelope-o" title="OpenMailBox"></i> <a target=_blank href="https://www.openmailbox.org/">OpenMailBox</a -->
+          </li><li><i class="fa fa-film" title="Webm"></i> <a target="_blank" href="https://gitgud.io/nixx/WebMConverter">Webm For Retards</a>
+          <!-- li><a target=_blank href="http://wasamis.tk/">WasAMist.tk</a -->
+        </li></ul>
+    </li></ul>
+    <ul class="nonmenu">
+      <li><a href=".static/faq.html" class="linkFaq">F.A.Q.</a>
+      </li><li><a href="logs.js" class="linkLogs">logs</a>
+    </li></ul>
+  </nav>
+  <nav class="mobileNav">
+    <ul>
+      <li><a href="." class="navLinkHome" rel="home">home</a>
+      </li><li><a href="boards.js" class="navBoardList">boards</a>
+      </li><li><a href="overboard_sfw" class="navOverboard">SFW overboard</a>
+      </li><li><a href="overboard" class="navOverboard">NSFW overboard</a>
+    </li></ul>
+    <div class="fr">
+      <a href="account.js" class="linkAccount">account</a>
+    </div>
+  </nav>
+<div id="pageScroll">
+  <div id="topBox" class="infoBox">
+    <img src=".static/logo.png" alt="Endchan logo" align="left" style="padding-right: 5px;">
+    <!-- a href="/librejp/res/575.html">
+      <img style="width: 9em" src=".static/68e2b4f1fb2e082e4b0067a88f87b560-imagepng.png" alt="Thanks Drawfag" align="right">
+      <img style="width: 8em" src=".static/end.jpg" alt="Thanks Drawfag" align="right">
+    </a -->
+    <h2>Endchan.</h2>
+    <h3>The imageboard at the end of the universe</h3>
+    <p>The story so far: In 2015 Endchan was created. This has made a lot of people very angry and been widely regarded as a bad move</p>
+    <hr>
+    <p>This is an anonymous imageboard that <b>promotes ideas</b> over identity. Here anyone can run their <b>own boards</b>. The only three global rules are:</p>
+    <iframe src=".static/inner_rules.html" width="99%" height="110"></iframe><br>
+    <p>We're actively working to <b>improve</b> the site. Any and all <a href="/operate/">feedback</a> is appreciated.</p>
+    <p>You must be 18 years or older to visit this site.</p>
+    <p>This site is actively moderated by our team of volunteers.</p>
+  </div>
+
+  <div id="indexWrapper">
+    <div id="innerWrapper">
+
+      <div class="infoBox">
+        <p>UPDATE: 2021-03-23 7:19PM PDT - Board Owners can now disallow TOR posting</p>
+        <!-- p>UPDATE: 2021-01-16 8:26PM PDT - <a href="/.static/donations.html">Donations page</a> has been updated. -->
+        <!-- center><a href="/.static/images/oc/odilitime.png" target="_blank"><img width="320" src="/.static/images/oc/odilitime.png"></A></center -->
+        <!-- 2021 is now more than ever to support who you can trying to save Free Speech and the Internet
+        </p -->
+        <!-- p>UPDATE: 2020-06-04 5:47PM PDT - Bitchute videos are now embeddable, blame Ecco</p>
+        <p>UPDATE: 2020-06-04 5:17PM PDT - Tor checks tweaked to prevent spam</p -->
+        <!-- p>UPDATE: 2020-06-02 6:32PM PDT - We added tiktok embed support, ausneets are to blame. Let us know on <a href="/operate/">&gt;&gt;&gt;/operate/</a> if there's a different embed we should add</p -->
+        <!-- p>UPDATE: 2020-05-25 11:38AM PDT - It's Towel Day join us for a special <a href="/operate/res/10923.html#11129">Movie Corner</a> in just a few hours</p -->
+        <!-- p>UPDATE: 2020-05-13 13:26PM PDT - Join us for <a href="/operate/res/10923.html#11129">Movie Corner on 5/25/20</a></p -->
+        <!-- p>UPDATE: 2020-05-01 16:37PM PDT - Join us for <a href="/operate/res/10923.html#11078">Movie Corner Tomorrow</a></p -->
+        <!-- p>UPDATE: 2020-04-29 12:03AM PDT - Fix media posting from iOS devices</p>
+        <p>UPDATE: 2020-04-28 10:50PM PDT - We have enabled the block bypass again for "spammers" (but kept it disabled for bans), if you're still having troubles <a href="/operate/res/11072.html">see this thread</a></p -->
+        <!-- p>UPDATE: 2020-04-25 4:27PM PDT - TOR/I2P/Lokinet posting should work without block-bypass now</p>
+        <p>UPDATE: 2020-04-25 2:50AM PDT - For <a href="/operate/res/11072.html">testing purposes block bypass is turned off</a> for 24 hours.</p -->
+      </div>
+      <br>
+
+      <div class="infoBox">
+        <h3>Category Multiboards:</h3>
+        <a href="/art+film+oekaki+draw">Art</a> |
+        <a href="/adv+r9k+hope+spoon">Advice</a> |
+        <a href="/a+am+AM+amr+l+monster+m+2hu+animach">Anime &amp; Manga</a> |
+        <a href="/b+webm+v+vvv+vidya+lv+tg+otomad+mu+metal+tv+f+clipuploads">Entertainment</a> |
+        <a href="/4+deutsch+j+jp+italia+fr+kc+kurenai+int+intl+lang+librejp+rzabczan+55chan">International</a> |
+        <a href="/pol+pdfs+his+ggrevolt+horror+aethism">Politics</a> |
+        <a href="/tech+g+markov+os+agdg+cyber+HTML+2600">Tech</a> |
+      </div>
+
+      <div id="newsBoard"></div>
+
+      <!-- latest posts -->
+      <div id="divLatestPosts" class="infoBox">
+        <h3 style="height: 32px; "><a href=".static/sauron.html"><img align="center" height="32" src=".static/eye_of_sauron.gif"></a> <a href=".static/sauron.html">Latest Posts</a></h3>
+      <div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351891">&gt;&gt;/ausneets/351891</a>
+<span class="labelPreview">https://www.youtube.com/watch?v=Vi05EG6sTVQ</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351890">&gt;&gt;/ausneets/351890</a>
+<span class="labelPreview">I'm just taking the piss unna **taking it away from you**
+
+&gt;&gt;351889
+I own my failures</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351889">&gt;&gt;/ausneets/351889</a>
+<span class="labelPreview">&gt;&gt;351879
+lol don't get all high and mighty, you're in no position. Pot v kettle.</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351888">&gt;&gt;/ausneets/351888</a>
+<span class="labelPreview">&gt;&gt;351878
+m8, you need an eating coach, to help you get over the loser skellie psychology.</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351887">&gt;&gt;/ausneets/351887</a>
+<span class="labelPreview">&gt;&gt;351881
+Having 2-3 standards and stopping by 9pm?</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351886">&gt;&gt;/ausneets/351886</a>
+<span class="labelPreview">&gt;&gt;351878
+Give them to the dog.</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351885">&gt;&gt;/ausneets/351885</a>
+<span class="labelPreview">&gt;&gt;351882
+&gt;&gt;351880
+Gave the rest to the dog.</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351884">&gt;&gt;/ausneets/351884</a>
+<span class="labelPreview">&gt;&gt;351881
+Don't do it.</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351883">&gt;&gt;/ausneets/351883</a>
+<span class="labelPreview">&gt;&gt;351881
+NO</span></div><div class="latestPostCell"><a class="linkPost" href="/ausneets/res/351134.html#351882">&gt;&gt;/ausneets/351882</a>
+<span class="labelPreview">&gt;&gt;351878
+Push them in neet</span></div></div>
+
+      <!-- board list -->
+      <div id="divBoards" class="topBoards infoBox">
+        <h3>Current Top Boards</h3>
+      <a href="/ausneets/">/ausneets/ - Aus NEETs</a><br><a href="/fscchan/">/fscchan/ - Fscchan</a><br><a href="/imouto/">/imouto/ - 妹</a><br><a href="/yuri/">/yuri/ - Yuri</a><br><a href="/b/">/b/ - Random</a><br><a href="/404/">/404/ - Not Found</a><br><a href="/KNMRG/">/KNMRG/ - Lietuvos merginos</a><br><a href="/4/">/4/ - Kiedy 3 to za mało</a><br><a href="/rapport/">/rapport/ - Rapport</a><br><a href="/bbg/">/bbg/ - Bonbibonkers General</a></div>
+
+      <!-- div class="infoBox">
+        All of Endchan is hosted by <a href="https://Sibyl.li/?ref=endchan" target=_blank>Sibyl LTD</a>
+      </div -->
+
+      <div class="infoBox">
+        <!-- p>UPDATE: 2016-04-04 6:49PM PDT - 8ch is <s>down</s> up, their disks had bit of a problem, all good now.</p -->
+        <!-- p>UPDATE: 2016-02-08 10:38PM PDT - <a target=_blank href="https://twitter.com/HW_BEAT_THAT">HotWheels</a> of 8ch.net, <a href="/operate/res/1397.html">buys an alt-domain for Endchan</a>: Endchan.pw</p -->
+        <h3>Access options</h3>
+        We have multiple frontends and domains to avoid a single point of failure. We have a large number of user uploads and our moderation staff can't always keep up and monitor all content that is produced. Plus we have had several bad actors try to shut us down due to the nature of free speech (generally acceptable speech doesn't need to be protected).
+        <p align="center">Our <a href="https://twitter.com/Endchanxyz" rel="nofollow" target="_blank">Twitter Account</a> is the best place for status</p>
+        <table width="100%">
+          <tbody><tr><td></td><th>Fast</th><th>Secure
+          </th></tr><tr><th>US</th><td><a rel="self nofollow" href="http://Endchan.net">http://Endchan.net</a></td><td><a rel="self nofollow" href="https://Endchan.net">https://Endchan.net</a>
+          </td></tr><tr><th>ALT</th><td><a rel="self nofollow" href="http://Endchan.gg">http://Endchan.gg</a></td><td><a rel="self nofollow" href="https://Endchan.gg">https://Endchan.gg</a>
+          </td></tr><tr><th>CDN*</th><td><a rel="self nofollow" href="http://Endchan.org">http://Endchan.org</a></td><td><a rel="self nofollow" href="https://Endchan.org">https://Endchan.org</a>
+          <!-- tr><th colspan=3>EU "DMCA-free" offshore hosting provided by <a href="https://Sibyl.li/?ref=endchan">Sibyl LTD</a></th>
+          <tr><th>fast<td><a rel="self nofollow" href="http://eu.Endchan.net">http://eu.Endchan.net</a><td><a rel="self nofollow" href="http://eu.Endchan.org">http://eu.Endchan.org</a>
+          <tr><th>secure<td><a rel="self nofollow" href="https://eu.Endchan.net">https://eu.Endchan.net</a><td><a rel="self nofollow" href="https://eu.Endchan.org">https://eu.Endchan.org</a -->
+        </td></tr></tbody></table>
+        <table width="100%">
+          <!-- tr><td><th>New<th>Old -->
+          <tbody><tr><th>TOR v3:</th><td colspan="2"><a href="http://enxx3byspwsdo446jujc52ucy2pf5urdbhqw3kbsfhlfjwmbpj5smdad.onion/">enxx3byspwsdo446jujc52ucy2pf5urdbhqw3kbsfhlfjwmbpj5smdad.onion</a>
+          </td></tr><tr><th>TOR v2:</th><td>Easy to remember:<br><a rel="self nofollow" href="http://endchan5doxvprs5.onion/">endchan5doxvprs5.onion</a></td><td>Trusted:<br><a rel="self nofollow" href="http://s6424n4x4bsmqs27.onion/">s6424n4x4bsmqs27.onion</a>
+          </td></tr><tr><th><a href="https://github.com/loki-project/loki-network" title="Like I2P but better">Lokinet</a> support:</th><td colspan="2"><a rel="self nofollow" href="http://kqrtg5wz4qbyjprujkz33gza7r73iw3ainqp1mz5zmu16symcdwy.loki/">kqrtg5wz4qbyjprujkz33gza7r73iw3ainqp1mz5zmu16symcdwy.loki</a>
+          <!-- tr><th>I2P support:<td colspan=2><a rel="self nofollow" href="http://psgnrs5y5aew3foaeijufd3otxmfq3cl6p2b27tekmnqxrc3kgwa.b32.i2p">psgnrs5y5aew3foaeijufd3otxmfq3cl6p2b27tekmnqxrc3kgwa.b32.i2p</a>
+          <tr><th><a href="https://yggdrasil-network.github.io/">Yggdrasil</a> support:<td colspan=2><a rel="self nofollow" href="http://[200:4d21:507a:b19e:7876:7b2b:774:1b77]/">http://[200:4d21:507a:b19e:7876:7b2b:774:1b77]/</a -->
+          <!-- <a rel="self nofollow" href="http://endchan.i2p/">endchan.i2p</a> (in testing, let <A href="/operate/">>>/operate/</a> know if you have problems) -->
+          </td></tr><tr id="opennicSupported" style="display: none"><td colspan="3">OpenNIC support detected, you can also use: <a rel="self nofollow" href="http://end.chan">end.chan</a>
+        </td></tr></tbody></table>
+        <script>checkOpenNIC();</script>
+        <small>* Accelerated by CloudFlare.</small>
+        <!-- small>* Protected by BitMitigate.</small -->
+        <!-- small>** Not as tested as fast version</small -->
+      </div>
+
+      <div id="links">
+        <span>[</span>
+        <a href="logs.js" class="linkLogs">logs</a>
+        <span>/</span>
+        <a href="graphs.js" class="linkGraphs">daily graphs</a>
+        <!-- span>/</span -->
+        <a href="archive" style="display: none" class="linkArchives">archives</a>
+        <!-- span>/</span>
+        <a href="account.js" class="linkAccount">account</a -->
+        <span>/</span>
+        <a href=".static/boardClaimProcess.html" class="linkBoardClaimProcess">board claim process</a>
+        <span>/</span>
+        <a href=".static/globalRules.html" class="linkGlobalRules">global rules</a>
+        <span>/</span>
+        <a href=".static/faq.html" class="linkFaq">F.A.Q.</a>
+        <span>/</span>
+        <a href=".static/donations.html" class="linkDonations">Donations</a>
+        <span>/</span>
+        <a href=".static/contact.html" class="linkContact">Contact</a>
+        <span>]</span>
+      </div>
+
+      
+
+    </div>
+
+    <!-- latest images -->
+    <div class="infoBox" id="divLatestImagesInfoBox">
+      <input type="checkbox" id="NSFWimages" title="Show NSFW images">
+      <div id="divLatestImages"><div class="latestImageCell"><a class="linkPost" href="/news/res/17155.html#17612"><img src="/.media/t_69b8e645f6a4074b0def1dc436e49a44-imagejpeg"></a></div><div class="latestImageCell"><a class="linkPost" href="/news/res/17155.html#17612"><img src="/.media/t_e103e88b7b5e4661601045fbb63c99e6-imagepng"></a></div><div class="latestImageCell"><a class="linkPost" href="/news/res/17155.html#17612"><img src="/.media/t_1f13bebfd5e4a2967d410207d1338515-imagejpeg"></a></div><div class="latestImageCell"><a class="linkPost" href="/tech/res/14695.html#14728"><img src="/.media/t_cde32ea54b2f63305c628601f5507c3c-imagepng"></a></div><div class="latestImageCell"><a class="linkPost" href="/news/res/17155.html#17613"><img src="/.media/t_2e58fcab78cc8bf9dfff94ea667d066c-imagegif"></a></div><div class="latestImageCell"><a class="linkPost" href="/operate/res/11645.html#11645"><img src="/.media/51e8b2dee13b6ed24b11025bf8a381b6-imagepng.png"></a></div></div>
+    </div>
+
+  </div>
+  <!-- footer, from /.static/footerInfo.html -->
+
+  <br clear="both">
+  <div style="text-align: center">
+    <p>All posts on Endchan are the responsibility of the individual poster and not the administration of Endchan, pursuant to 47 U.S.C. § 230.</p>
+    <p><b>We have not been served any secret court orders and are not under any gag orders.</b></p>
+    <p>To make a DMCA request or report illegal content, please report it on <a rel="nofollow" href="https://qchat.rizon.net/?channels=%23InfinityNow" target="_blank">IRC</a>!</p>
+  </div>
+  <br>
+  <div style="text-align: center">
+    Endchan is powered by MEME GOD DB and <a href="https://gitgud.io/groups/InfinityNow">InfinityNow</a>, a fork of <a rel="nofollow" href="https://twitter.com/stephenlynx">Stephen Lynx</a>'s <a href="https://gitgud.io/LynxChan/LynxChan">LynxChan</a> engine.
+  </div>
+
+  <footer>
+    Born 12-20-15
+    <span><a rel="nofollow" href="https://qchat.rizon.net/?channels=%23InfinityNow" target="_blank">IRC: #InfinityNow @ rizon.net</a></span>
+    <a href="https://gitgud.io/groups/InfinityNow" target="_blank">(Group)</a>
+    <a rel="nofollow" href="https://trello.com/b/1BhkuUZh/todo-list" target="_blank">(Trello)</a>
+    <a href="https://gitgud.io/obongo/8TailedLynx" target="_blank">8TailedLynx</a>
+    <a rel="nofollow" href="https://trello.com/b/cwS2BTcg/8tailedlynx" target="_blank">(Trello)</a>
+    <a rel="nofollow" id="linkEngine" href="http://gitgud.io/LynxChan/LynxChan">LynxChan 1.7.5</a>
+    <a href="https://gitgud.io/groups/LynxChan" target="_blank">(Group)</a>
+    <a rel="nofollow" href="https://trello.com/b/JAN7N3OO/lynxchan" target="_blank">(Trello)</a>
+    <div id="footerInfo">
+      <select name="switchlayoutcontrol" size="1" onchange="chooseStyle(this.options[this.selectedIndex].value, 'layout')">
+      </select>
+      <select name="switchcolorcontrol" size="1" onchange="chooseStyle(this.options[this.selectedIndex].value, 'color')">
+      </select>
+    </div>
+  </footer>
+</div>
+
+
+</body></html>
